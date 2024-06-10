@@ -1,0 +1,58 @@
+nav{
+    background-color: hsl(240, 100%, 70%);
+    display: flex;
+    justify-content: space-between;
+}
+
+nav>.left-nav{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+nav>.right-nav{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: block;
+    height: 100%;
+    min-width: 150px;
+    padding: 15px 15px 15px 15px;
+}
+nav a:hover{
+    font-weight: bold;
+    background-color: orange;
+    box-shadow: 2px 2px 5px hsl(0, 0%, 50%);
+    text-shadow: 5px 5px 10px magenta;
+}
+nav>.left-nav>li>ul{
+    position: absolute;
+    z-index: 10;
+    background-color: hsl(240, 100%, 50%);
+    padding: 0;
+    list-style: none;
+    display: none;
+}
+nav>.left-nav>li:hover>ul{
+    display: block;
+    animation-name: showProducts;
+    animation-duration: 0.2s;
+}
+
+@keyframes showProducts{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

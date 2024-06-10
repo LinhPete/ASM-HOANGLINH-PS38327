@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/signIn_Up.css">
+</head>
+<body>
+    <header id="top">
+        <img src="../img/FPT_Polytechnic.png" alt="logo website">
+        <div class="search-controller">
+            <input type="search" placeholder="Tìm sản phẩm" id="searchField">
+            <input type="button" value="🔍" id="searchBtn">
+        </div>
+        <div class="lang-controller">
+            <select name="lang" id="lang">
+                <option value="English">English</option>
+                <option value="Tiếng Việt">Tiếng Việt</option>
+                <option value="日本語">日本語</option>
+            </select>
+        </div>
+    </header>
+    <nav>
+        <ul class="left-nav">
+            <li><a href="home.html">Trang chủ</a></li>
+            <li><a href="about.html">Giới thiệu</a></li>
+            <li>
+                <a href="">Sản phẩm</a>
+                <ul>
+                    <li><a href="home.html#Iphone">Iphone</a></li>
+                    <li><a href="home.html#Samsung">Samsung</a></li>
+                    <li><a href="home.html#Xiaomi">Xiaomi</a></li>
+                </ul>
+            </li>
+            <li><a href="support.html">Hỗ trợ</a></li>
+        </ul>
+        <ul class="right-nav">
+            <li><a href="signIn.html">Đăng nhập</a></li>
+            <li><a href="signUp.html">Đăng ký</a></li>
+        </ul>
+    </nav>
+    <main>
+        <aside>
+            <ul style="list-style-type: none;padding: 0;margin: 0;border-radius: 15px;">
+                <li><a href="home.html#Iphone" id="aside-first">Iphone</a></li>
+                <li><a href="home.html#Samsung">Samsung</a></li>
+                <li><a href="home.html#Xiaomi" id="aside-last">Xiaomi</a></li>
+            </ul>
+        </aside>
+
+        <article>
+            <div class="container">
+                <form action="">
+                    <h2>ĐĂNG KÝ</h2>
+                    <div class="username">
+                        <label for="id-name">Tên tài khoản</label><br>
+                        <input type="text" placeholder="Nhập tên tài khoản ở đây" id="id-name" class="field-input">
+                    </div>
+                    <div class="password">
+                        <label for="id-name">Mật khẩu</label><br>
+                        <input type="password" id="id-name" class="field-input">
+                    </div>
+                    <div class="submit-btns">
+                        <input type="submit" value="Đăng ký">
+                        <p>Đã có tài khoản? <a href="signIn.html">Đăng nhập</a></p>
+                    </div>
+                </form>
+            </div>
+        </article>
+
+    </main>
+    <footer>
+        <h5>Assignment WEB1013</h5>
+        <p>&copy; PS38327 - Nguyễn Đàm Hoàng Linh</p>
+    </footer>
+
+    <div class="moveUp">
+        <a href="#top"><img src="../img/upload.png" alt="move top"></a>
+    </div>
+
+    <div class="theme-switch" title="Dark Theme">
+        <div class="switch">☀️</div>
+    </div>
+    <script>
+        const container = document.querySelector(".theme-switch");
+        const slider = document.querySelector(".switch");
+        const all = document.querySelectorAll("body *");
+        container.addEventListener("click", () => {
+            slider.classList.toggle("dark");
+            container.classList.toggle("darkContainer");
+            all.forEach(element => {
+                element.classList.toggle("dark-theme");
+            });
+            if (slider.classList.contains("dark")) {
+                slider.textContent = "🌙";
+                container.title = "Light Theme";
+            }
+            else {
+                slider.textContent = "☀️";
+                container.title = "Dark Theme";
+            }
+        });
+    </script>
+</body>
+</html>

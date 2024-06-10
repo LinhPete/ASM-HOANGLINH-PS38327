@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../layout/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Trang danh mục</h1>
+        <nav class="row">
+            <ul class="nav-left col-55">
+                <li id="home" class="nav-item">Trang chủ</li>
+                <li id="category" class="nav-item">Danh mục</li>
+                <li id="product" class="nav-item">Sản phẩm</li>
+                <li id="customer" class="nav-item">Khách hàng</li>
+                <li id="package" class="nav-item">Đơn hàng</li>
+                <li id="manage" class="nav-item">Quản trị</li>
+            </ul>
+
+            <div class="nav-right col-55">
+                <li>Đăng nhập</li>
+            </div>
+        </nav>
+    </header>
+    <script>
+        const navItems = document.querySelectorAll(".nav-item");
+        navItems.forEach(item => {
+            item.addEventListener("click", event => {
+                const location = event.target.id;
+                document.location = `${location}.html`;
+            })
+        })
+    </script>
+</body>
+</html>

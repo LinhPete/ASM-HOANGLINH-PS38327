@@ -1,37 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../layout/css/style.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Trang quản trị</title>
+   <link rel="stylesheet" href="../layout/css/admin.css">
 </head>
 <body>
-    <header>
-        <h1>Trang danh mục</h1>
-        <nav class="row">
-            <ul class="nav-left col-55">
-                <li id="home" class="nav-item">Trang chủ</li>
-                <li id="category" class="nav-item">Danh mục</li>
-                <li id="product" class="nav-item">Sản phẩm</li>
-                <li id="customer" class="nav-item">Khách hàng</li>
-                <li id="package" class="nav-item">Đơn hàng</li>
-                <li id="manage" class="nav-item">Quản trị</li>
-            </ul>
-
-            <div class="nav-right col-55">
-                <li>Đăng nhập</li>
+   <header>
+      <h1>trang quản trị / dashboard </h1>
+      <nav>
+         <div class="row">
+            <div class="nav-left col-l-70">
+               <ul>
+                  <li><a href="../">trang chủ</a></li>
+                  <li class="active"><a href="category.html">danh mục</a></li>
+                  <li><a href="product.html">sản phẩm</a></li>
+                  <li><a href="customer.html">khách hàng</a></li>
+                  <li><a href="order.html">đơn hàng</a></li>
+                  <li><a href="user.html">Quản trị viên</a></li>
+               </ul>
             </div>
-        </nav>
-    </header>
-    <script>
-        const navItems = document.querySelectorAll(".nav-item");
-        navItems.forEach(item => {
-            item.addEventListener("click", event => {
-                const location = event.target.id;
-                document.location = `${location}.html`;
-            })
-        })
-    </script>
+            <div class="nav-right col-r-30">
+               <ul>
+                  <li><a href="login.html">Đăng nhập</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+   </header>
+
+   <section>
+      <div class="row">
+         <div class="col-l-70">
+            <!-- danh mục sản phẩm -->
+            <div class="title">
+               <h2>danh mục sản phẩm</h2>
+            </div>
+            <table class="cat">
+               <thead>
+                  <tr>
+                     <th>Id</th>
+                     <th>Name</th>
+                     <th>Image</th>
+                     <th>Created</th>
+                     <th>Status</th>
+                     <th>Action</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>1</td>
+                     <td>Apple</td>
+                     <td>hinh-01.jpg</td>
+                     <td>10/01/2024</td>
+                     <td>1</td>
+                     <td>
+                        <a href="">Edit</a> | <a href="">Delete</a>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>2</td>
+                     <td>Nokia</td>
+                     <td>hinh-01.jpg</td>
+                     <td>10/01/2024</td>
+                     <td>1</td>
+                     <td>
+                        <a href="">Edit</a> | <a href="">Delete</a>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>3</td>
+                     <td>Oppo</td>
+                     <td>hinh-01.jpg</td>
+                     <td>10/01/2024</td>
+                     <td>1</td>
+                     <td>
+                        <a href="">Edit</a> | <a href="">Delete</a>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>4</td>
+                     <td>Xioami</td>
+                     <td>hinh-01.jpg</td>
+                     <td>10/01/2024</td>
+                     <td>1</td>
+                     <td>
+                        <a href="">Edit</a> | <a href="">Delete</a>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>5</td>
+                     <td>Samsung</td>
+                     <td>hinh-01.jpg</td>
+                     <td>10/01/2024</td>
+                     <td>1</td>
+                     <td>
+                        <a href="">Edit</a> | <a href="">Delete</a>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>6</td>
+                     <td>Realme</td>
+                     <td>hinh-01.jpg</td>
+                     <td>10/01/2024</td>
+                     <td>1</td>
+                     <td>
+                        <a href="">Edit</a> | <a href="">Delete</a>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>7</td>
+                     <td>TCL</td>
+                     <td>hinh-01.jpg</td>
+                     <td>10/01/2024</td>
+                     <td>1</td>
+                     <td>
+                        <a href="">Edit</a> | <a href="">Delete</a>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>8</td>
+                     <td>Honer</td>
+                     <td>hinh-01.jpg</td>
+                     <td>10/01/2024</td>
+                     <td>1</td>
+                     <td>
+                        <a href="">Edit</a> | <a href="">Delete</a>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>9</td>
+                     <td>Vivo</td>
+                     <td>hinh-01.jpg</td>
+                     <td>10/01/2024</td>
+                     <td>1</td>
+                     <td>
+                        <a href="">Edit</a> | <a href="">Delete</a>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>10</td>
+                     <td>Mobel</td>
+                     <td>hinh-01.jpg</td>
+                     <td>10/01/2024</td>
+                     <td>1</td>
+                     <td>
+                        <a href="">Edit</a> | <a href="">Delete</a>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div class="col-r-30">
+            <div class="title">
+               <h2>thêm danh mục</h2>
+            </div>
+            <!-- //form nhập liệu -->
+            <form action="" class="frm-cat" enctype="multipart/form-data">
+               <input type="text" name="" id="" placeholder="Category name">
+               <input type="file" name="" id="">
+               <input type="date" name="" id="">
+               <div class="status">Status 
+                  <label for="enable"><input type="radio" name="status" id="enable" value="1"> Enable</label>
+                  <label for="disable"><input type="radio" name="status" id="disable" value="0"> Disable</label>
+               </div>
+               <div class="btn"><input type="button" value="Add new"></div>
+            </form>
+         </div>
+     </div>
+   </section>
+
+   <footer>
+      <div>Copyright 2024 My Dashboard.</div>
+   </footer>
 </body>
 </html>

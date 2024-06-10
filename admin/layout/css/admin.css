@@ -1,0 +1,273 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;   
+}
+
+body {
+   /* max-width: 1200px; */
+   /* margin: 0 20px; */
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 16px;
+   background-color: beige;
+}
+
+header h1 {
+   background-color: #aaa;
+   color: #fff;
+   padding: 15px 0;
+   text-align: center;
+   text-transform: uppercase;
+}
+
+/* columns */
+.col-50 {
+   float: left;
+   width: 50%;
+ }
+
+ .col-l-30 {
+   float: left;
+   width: 30%;
+ }
+
+ .col-r-70 {
+   float: right;
+   width: 70%;
+ }
+
+ .col-l-70 {
+   float: left;
+   width: 70%;
+}
+
+.col-r-30 {
+   float: right;
+   width: 30%;
+}
+
+.col-l-40 {
+   float: left;
+   width: 40%;
+ }
+
+ .col-r-60 {
+   float: right;
+   width: 60%;
+ }
+
+
+ .col-l-60 {
+   float: left;
+   width: 60%;
+ }
+
+ .col-r-40 {
+   float: right;
+   width: 40%;
+ }
+
+ /* Clear floats after the columns */
+ .row:after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+
+/* navigation MENU */
+nav .nav-right {
+   text-align: right;
+}
+
+nav ul {
+   list-style: none;
+   border-bottom: 1px solid #fff;
+}
+
+nav ul li {
+   display: inline-block;
+   padding: 10px;
+}
+
+nav ul li a {
+   text-decoration: none;
+   text-transform: uppercase;
+}
+
+nav ul li:hover {
+   background-color: aqua;
+}
+
+nav ul li.active {
+   background-color: aqua;
+}
+
+nav ul li a:hover {
+   color: red;
+}
+
+
+/* session */
+section {
+   padding: 10px;
+   background-color: #ddd;
+}
+
+.container {
+   width: 98%;
+   margin: 0 auto;
+}
+
+.grid {
+   display: grid;
+   grid-template-columns: 2fr 1fr 1fr;
+   grid-gap: 20px;
+   margin: 30px auto;
+}
+
+.card {
+   border: 1px solid #ccc;
+   padding: 20px;
+   background-color: #f9f9f9;
+}
+
+canvas {
+   width: 100%;
+}
+
+/* Form */
+.title h2 {
+   text-transform: uppercase;
+   text-align: center;
+   padding: 20px 0;
+}
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+   padding: 0 10px;
+}
+
+table, th, td {
+   border: 1px solid #fff;
+   padding: 8px;
+   /* text-align: left; */
+}
+
+th {
+   background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+   background-color: #fff;
+}
+
+table.cat td:nth-child(1),
+td:nth-child(4),
+td:nth-child(5),
+td:nth-child(6)
+{
+   text-align: center;
+}
+
+.frm-cat {
+   padding: 10px;
+   margin: 0 10px;
+   border-radius: 10px;
+   background-color: #fff;
+}
+
+.action-icons {
+   display: flex;
+   justify-content: space-around;
+}
+.action-icons a {
+   text-decoration: none;
+   color: #333;
+}
+.action-icons a:hover {
+   color: #ff0000;
+}
+form {
+   margin-top: 20px;
+}
+
+form .status,
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form input[type="submit"] {
+   padding: 10px;
+   margin-bottom: 10px;
+   width: 100%;
+   box-sizing: border-box;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
+
+form input[type="submit"],
+form input[type="button"] {
+   background-color: #666;
+   color: #fff;
+   font-weight: bold;
+   font-size: 16px;
+   width: 60%;
+   padding: 12px 0;
+   margin: 10px 0;
+   cursor: pointer;
+}
+
+form .btn {
+   text-align: center;
+}
+
+/* input file */
+input[type="file"] {
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   padding: 10px;
+   width: 100%;
+   box-sizing: border-box;
+   background-color: #f9f9f9;
+   transition: border-color 0.3s ease;
+   margin-bottom: 10px;
+}
+
+input[type="file"]:focus {
+   border-color: #00bcd4;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+   background-color: #00bcd4;
+   color: white;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+   background-color: #0097a7;
+}
+
+/* Ẩn nút mặc định của trình duyệt */
+input[type="file"]::-webkit-file-upload-button {
+   visibility: hidden;
+}
+
+input[type="file"]::before {
+   content: 'Chọn ảnh'; /* Nhãn cho trường nhập */
+}
+
+/* form login */
+.frm-login {
+   text-align: center;
+   margin: 20px 0;
+}
+
+/* Footer */
+footer {
+   text-align: center;
+   padding: 15px;
+}

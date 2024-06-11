@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Trang quản trị</title>
    <link rel="stylesheet" href="../layout/css/admin.css">
+   <style>
+      th,
+      td {
+         width: 16.67%;
+
+         img {
+            width: 100%;
+         }
+      }
+
+      .product-form {
+         width: 50%;
+         height: 90%;
+         background-color: white;
+         border-radius: 30px;
+         padding: 30px;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         overflow: auto;
+      }
+
+      .product-form>form>.img-container>img {
+         width: 100%;
+         height: 100%;
+      }
+
+      .product-form>form>.product-detail>select {
+         padding: 10px;
+         margin-bottom: 10px;
+         width: 100%;
+         box-sizing: border-box;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+      }
+      .product-form>form>.form-buttons{
+         display: flex;
+      }
+
+      .hidden{
+         display: none;
+      }
+      .show{
+         display: block;
+         opacity: 1;
+      }
+   </style>
 </head>
+
 <body>
    <header>
       <h1>trang quản trị / dashboard </h1>
@@ -32,13 +82,91 @@
 
    <section>
       <div class="row">
-         <div class="col-l-70">hello</div>
-         <div class="col-r-30">good bye</div>
-     </div>
+         <table>
+            <tr>
+               <th>Hình sản phẩm</th>
+               <th>Mã sản phẩm</th>
+               <th>Loại sản phẩm</th>
+               <th>Tên sản phẩm</th>
+               <th>Giá sản phẩm</th>
+               <th>Số lượng tồn kho</th>
+            </tr>
+            <tr>
+               <td><img src="../layout/img/galaxy-s24-ultra.jpg" alt="galaxy-s24-ultra"></td>
+               <td>SP001</td>
+               <td>Samsung</td>
+               <td>Galaxy-s24-ultra</td>
+               <td>3000</td>
+               <td>50</td>
+            </tr>
+            <tr>
+               <td><img src="../layout/img/galaxy-s24-ultra.jpg" alt="galaxy-s24-ultra"></td>
+               <td>SP001</td>
+               <td>Samsung</td>
+               <td>Galaxy-s24-ultra</td>
+               <td>3000</td>
+               <td>50</td>
+            </tr>
+            <tr>
+               <td><img src="../layout/img/galaxy-s24-ultra.jpg" alt="galaxy-s24-ultra"></td>
+               <td>SP001</td>
+               <td>Samsung</td>
+               <td>Galaxy-s24-ultra</td>
+               <td>3000</td>
+               <td>50</td>
+            </tr>
+         </table>
+      </div>
    </section>
+   <button onclick="openForm()">Cập nhật dữ liệu sản phẩm</button>
+
+   <div class="product-form hidden" id="product-form">
+      <form action="">
+         <div class="img-container"><img src="../layout/img/galaxy-s24-ultra.jpg" alt=""></div>
+         <div class="product-detail">
+            <label for="product-type">Loại sản phẩm</label><br>
+            <select name="" id="product-type">
+               <option value="Samsung">Samsung</option>
+               <option value="Iphone">Iphone</option>
+               <option value="Xiaomi">Xiaomi</option>
+            </select><br>
+            <label for="product-name">Tên sản phẩm</label>
+            <input type="text" id="product-name"><br>
+            <label for="product-price">Giá sản phẩm</label>
+            <input type="number" min="100" id="product-price"><br>
+            <label for="product-storage">Số lượng tồn</label>
+            <input type="number" min="0"><br>
+         </div>
+         <div class="form-buttons">
+            <input type="submit" value="Thêm">
+            <input type="submit" value="Sửa">
+            <input type="submit" value="Xóa">
+            <input type="button" value="Mới">
+            <input type="button" value="Thoát" onclick="exitForm()">
+         </div>
+      </form>
+   </div>
 
    <footer>
       <div>Copyright 2024 My Dashboard.</div>
    </footer>
+
+   <script>
+      const form = document.getElementById("product-form");
+      const rows = document.querySelectorAll("table tr");
+      const all = document.querySelector("body");
+      rows.forEach(element => {
+         element.addEventListener("dblclick", event => {
+            openForm();
+         })
+      })
+      function openForm(){
+         form.classList.add("show");
+      }
+      function exitForm(){
+         form.classList.remove("show");
+      }
+   </script>
 </body>
+
 </html>

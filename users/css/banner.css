@@ -1,0 +1,65 @@
+.banner {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner>.slide {
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 100%;
+}
+
+@keyframes toCenter {
+    to {
+        top: 0px;
+        left: 0px;
+    }
+}
+
+@keyframes slideLeft {
+    /* from {
+        top: 0px;
+        left: 0px;
+    } */
+
+    to {
+        top: 0px;
+        left: -100%;
+    }
+}
+
+@keyframes slideRight {
+    /* from {
+        top: 0px;
+        left: 0px;
+    } */
+
+    to {
+        top: 0px;
+        left: 100%;
+    }
+}
+
+.banner>button {
+    height: 100%;
+    width: 5%;
+    font-size: 2rem;
+    padding: 1em;
+    opacity: 0.1;
+    cursor: pointer;
+}
+
+.banner>button:hover {
+    opacity: 1;
+}

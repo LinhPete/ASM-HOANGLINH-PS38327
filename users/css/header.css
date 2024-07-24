@@ -1,8 +1,7 @@
 header{
-    height: 100px;
+    height: 50px;
     background-color: hsl(290, 100%, 40%);
     position: relative;
-    transition: all 0.3s ease-in-out;
 }
 .search-controller{
     position: absolute;
@@ -37,7 +36,7 @@ header>img{
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
-    height: 50%;
+    height: 80%;
 }
 
 header>.lang-controller{

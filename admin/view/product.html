@@ -39,6 +39,7 @@
       .product-form>form>.img-container{
          padding: 10px;
          width: 50%;
+         height: 80%;
          float: left;
       }
       .product-form>form>.img-container>img {
@@ -70,6 +71,29 @@
          display: block;
          opacity: 1;
       }
+      #btnChonAnh{
+         border: 1px solid;
+         user-select: none;
+         padding: 5px;
+         cursor: pointer;
+      }
+      #btnChonAnh:hover{
+         background-color: hsl(240, 100%, 70%);
+      }
+      #galery{
+         padding: 10px;
+         width: 100%;
+         max-height: 200px;
+         overflow: auto;
+         position: absolute;
+      }
+      #galery>img{
+         width: 220px;
+         height: 150px;
+         margin: 5px;
+         float: left;
+         cursor: pointer;
+      }
    </style>
 </head>
 
@@ -98,67 +122,51 @@
    </header>
 
    <section>
-      <div class="row">
-         <table>
-            <tr>
-               <th>Hình sản phẩm</th>
-               <th>Mã sản phẩm</th>
-               <th>Loại sản phẩm</th>
-               <th>Tên sản phẩm</th>
-               <th>Giá sản phẩm</th>
-               <th>Số lượng tồn kho</th>
-            </tr>
-            <tr>
-               <td><img src="../layout/img/galaxy-s24-ultra.jpg" alt="galaxy-s24-ultra"></td>
-               <td>SP001</td>
-               <td>Samsung</td>
-               <td>Galaxy-s24-ultra</td>
-               <td>3000</td>
-               <td>50</td>
-            </tr>
-            <tr>
-               <td><img src="../layout/img/galaxy-s24-ultra.jpg" alt="galaxy-s24-ultra"></td>
-               <td>SP001</td>
-               <td>Samsung</td>
-               <td>Galaxy-s24-ultra</td>
-               <td>3000</td>
-               <td>50</td>
-            </tr>
-            <tr>
-               <td><img src="../layout/img/galaxy-s24-ultra.jpg" alt="galaxy-s24-ultra"></td>
-               <td>SP001</td>
-               <td>Samsung</td>
-               <td>Galaxy-s24-ultra</td>
-               <td>3000</td>
-               <td>50</td>
-            </tr>
+      <div>
+         <table id="prod-table">
+            
          </table>
       </div>
    </section>
-   <button onclick="openForm()">Cập nhật dữ liệu sản phẩm</button>
+   <button onclick="openNewForm()">Cập nhật dữ liệu sản phẩm</button>
 
    <div class="product-form hidden" id="product-form">
-      <form action="">
-         <div class="img-container"><img src="../layout/img/galaxy-s24-ultra.jpg" alt=""></div>
-         <div class="product-detail">
-            <label for="product-type">Loại sản phẩm</label><br>
-            <select name="" id="product-type">
+      <form action="" method="post" enctype="multipart/form-data">
+         <div class="img-container">
+            <img src="" alt="" id="formImg">
+            <div style="width: 100%;position: relative;">
+               <div id="btnChonAnh" onclick="chonAnh()">Chọn ảnh</div>
+               <div id="galery" class="hidden">
+                  <img src="../layout/img/galaxy-s23-ultra.png" alt="">
+                  <img src="../layout/img/galaxy-s24-ultra.jpg" alt="">
+                  <img src="../layout/img/iphone-15-plus.jpg" alt="">
+                  <img src="../layout/img/iPhone-15-pro-Max.jpg" alt="">
+                  <img src="../layout/img/Redmi-Note-12-Pro.jpg" alt="">
+                  <img src="../layout/img/redmi-note-13.png" alt="">
+               </div>
+            </div>
+         </div>
+         <label for="formMake">Loại sản phẩm</label><br>
+            <select name="formMake" id="formMake">
                <option value="Samsung">Samsung</option>
                <option value="Iphone">Iphone</option>
                <option value="Xiaomi">Xiaomi</option>
             </select><br>
-            <label for="product-name">Tên sản phẩm</label>
-            <input type="text" id="product-name"><br>
-            <label for="product-price">Giá sản phẩm</label>
-            <input type="number" min="100" id="product-price"><br>
-            <label for="product-storage">Số lượng tồn</label>
-            <input type="number" min="0"><br>
+         <div class="product-detail">
+            <label for="formId">Mã sản phẩm</label><br>
+            <input type="text" id="formId" disabled>
+            <label for="formName">Tên sản phẩm</label>
+            <input type="text" id="formName"><br>
+            <label for="formPrice">Giá sản phẩm</label>
+            <input type="number" min="100" id="formPrice"><br>
+            <label for="formStorage">Số lượng tồn</label>
+            <input type="number" min="0" id="formStorage"><br>
          </div>
          <div class="form-buttons">
-            <input type="submit" value="Thêm">
-            <input type="submit" value="Sửa">
-            <input type="submit" value="Xóa">
-            <input type="button" value="Mới">
+            <input type="button" value="Thêm" onclick="insert()">
+            <input type="button" value="Sửa" onclick="update()">
+            <input type="button" value="Xóa" onclick="remove()">
+            <input type="button" value="Mới" onclick="refresh()">
             <input type="button" value="Thoát" onclick="exitForm()">
          </div>
       </form>
@@ -168,21 +176,7 @@
       <div>Copyright 2024 My Dashboard.</div>
    </footer>
 
-   <script>
-      const form = document.getElementById("product-form");
-      const rows = document.querySelectorAll("table tr");
-      const all = document.querySelector("body");
-      rows.forEach(element => {
-         element.addEventListener("dblclick", event => {
-            openForm();
-         })
-      })
-      function openForm(){
-         form.classList.add("show");
-      }
-      function exitForm(){
-         form.classList.remove("show");
-      }
+   <script src="../layout/js/prod.js">
    </script>
 </body>
 

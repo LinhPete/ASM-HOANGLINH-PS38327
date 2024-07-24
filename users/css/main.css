@@ -125,7 +125,6 @@ main>article>.product-containers{
 main>article>.prod-img{
     width: 40%;
     float: left;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     margin-right: 30px;
@@ -138,6 +137,7 @@ main>article>.prod-img>.extras{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    overflow: auto;
     padding: 0;
     margin: 0;
 }

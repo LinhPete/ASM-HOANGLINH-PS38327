@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/banner.css">
 </head>
 <body>
     <header>
@@ -16,13 +17,6 @@
         <div class="search-controller">
             <input type="search" placeholder="Tìm sản phẩm" id="searchField">
             <input type="button" value="🔍" id="searchBtn">
-        </div>
-        <div class="lang-controller">
-            <select name="lang" id="lang">
-                <option value="English">English</option>
-                <option value="Tiếng Việt">Tiếng Việt</option>
-                <option value="日本語">日本語</option>
-            </select>
         </div>
     </header>
     <nav>
@@ -44,6 +38,18 @@
             <li><a href="signUp.html">Đăng ký</a></li>
         </ul>
     </nav>
+    <div class="banner">
+        <button id="btnPrev" onclick="toPrev()">◀️</button>
+        <div class="slide">
+            <img src="../img/products/galaxy-s23-ultra.png" alt="">
+            <img src="../img/products/galaxy-s24-ultra.jpg" alt="">
+            <img src="../img/products/iphone-15-plus.jpg" alt="">
+            <img src="../img/products/iPhone-15-pro-Max.jpg" alt="">
+            <img src="../img/products/Redmi-Note-12-Pro.jpg" alt="">
+            <img src="../img/products/redmi-note-13.png" alt="">
+        </div>
+        <button id="btnNext" onclick="toNext()">▶️</button>
+    </div>
     <main>
         <aside>
             <ul style="list-style-type: none;padding: 0;margin: 0;border-radius: 15px;">
@@ -68,29 +74,8 @@
     <div class="moveUp">
         <a href="#top"><img src="../img/upload.png" alt="move top"></a>
     </div>
-
-    <div class="theme-switch" title="Dark Theme">
-        <div class="switch">☀️</div>
-    </div>
-    <script>
-        const container = document.querySelector(".theme-switch");
-        const slider = document.querySelector(".switch");
-        const all = document.querySelectorAll("body *");
-        container.addEventListener("click", () => {
-            slider.classList.toggle("dark");
-            container.classList.toggle("darkContainer");
-            all.forEach(element => {
-                element.classList.toggle("dark-theme");
-            });
-            if (slider.classList.contains("dark")) {
-                slider.textContent = "🌙";
-                container.title = "Light Theme";
-            }
-            else {
-                slider.textContent = "☀️";
-                container.title = "Dark Theme";
-            }
-        });
+    <script src="../js/banner.js" type="text/javascript">
+        
     </script>
 </body>
 </html>

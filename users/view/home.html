@@ -15,11 +15,15 @@
 
 <body>
     <header id="top">
-        <img src="../img/FPT_Polytechnic.png" alt="logo website">
+        <img src="../img/icon/FPT_Polytechnic.png" alt="logo website">
         <div class="search-controller">
             <input type="search" placeholder="Tìm sản phẩm" id="searchField">
             <input type="button" value="🔍" id="searchBtn">
         </div>
+        <a href="cart.html">
+            <div>2</div>
+            <img src="../img/icon/cart.png" alt="Your shopping cart">
+        </a>
     </header>
 
     <nav>
@@ -44,12 +48,12 @@
     <div class="banner">
         <button id="btnPrev" onclick="toPrev()">◀️</button>
         <div class="slide">
-            <img src="../img/products/galaxy-s23-ultra.png" alt="">
-            <img src="../img/products/galaxy-s24-ultra.jpg" alt="">
-            <img src="../img/products/iphone-15-plus.jpg" alt="">
-            <img src="../img/products/iPhone-15-pro-Max.jpg" alt="">
-            <img src="../img/products/Redmi-Note-12-Pro.jpg" alt="">
-            <img src="../img/products/redmi-note-13.png" alt="">
+            <img src="../img/products/prod0/prod0.jpg" alt="">
+            <img src="../img/products/prod1/prod0.jpg" alt="">
+            <img src="../img/products/prod2/prod0.jpg" alt="">
+            <img src="../img/products/prod3/prod0.jpg" alt="">
+            <img src="../img/products/prod4/prod0.jpg" alt="">
+            <img src="../img/products/prod5/prod0.jpg" alt="">
         </div>
         <button id="btnNext" onclick="toNext()">▶️</button>
     </div>
@@ -57,23 +61,22 @@
         <section>
             <h2>Sản phẩm mới</h2>
             <div class="image-container">
-                <a href=""><img src="../img/products/iPhone-15-pro-Max.jpg" alt="iPhone-15-pro-Max"></a>
+                <a href="prod.html" onclick="openDetail(0)"><img src="../img/products/prod0/prod0.jpg" alt="iphone-15-plus"></a>
             </div>
             <div class="image-container">
-                <a href="iphone15-plus.html"><img src="../img/products/iphone-15-plus.jpg" alt="iphone-15-plus"></a>
+                <a href="prod.html" onclick="openDetail(1)"><img src="../img/products/prod1/prod0.jpg" alt="iPhone-15-pro-Max"></a>
             </div>
             <div class="image-container">
-                <a href="iphone15-plus.html"><img src="../img/products/galaxy-s24-ultra.jpg" alt="galaxy-s24-ultra"></a>
+                <a href="prod.html" onclick="openDetail(2)"><img src="../img/products/prod2/prod0.jpg" alt="galaxy-s23-ultra"></a>
             </div>
             <div class="image-container">
-                <a href="iphone15-plus.html"><img src="../img/products/galaxy-s23-ultra.png" alt="galaxy-s23-ultra"></a>
+                <a href="prod.html" onclick="openDetail(3)"><img src="../img/products/prod3/prod0.jpg" alt="galaxy-s24-ultra"></a>
             </div>
             <div class="image-container">
-                <a href="iphone15-plus.html"><img src="../img/products/redmi-note-13.png" alt="redmi-note-13"></a>
+                <a href="prod.html" onclick="openDetail(4)"><img src="../img/products/prod4/prod0.jpg" alt="Redmi-Note-12-Pro"></a>
             </div>
             <div class="image-container">
-                <a href="iphone15-plus.html"><img src="../img/products/Redmi-Note-12-Pro.jpg"
-                        alt="Redmi-Note-12-Pro"></a>
+                <a href="prod.html" onclick="openDetail(5)"><img src="../img/products/prod5/prod0.jpg" alt="redmi-note-13"></a>
             </div>
         </section>
         <aside>
@@ -87,11 +90,11 @@
         <article>
             <h3 id="Iphone">Iphone</h3>
             <div class="product-containers">
-                <a href="iphone15-plus.html">
+                <a href="prod.html" onclick="openDetail(0)">
                     <div class="prod">
                         <div class="name">Iphone-15-plus</div>
-                        <img class="image" src="../img/products/iphone-15-plus.jpg" />
-                        <div class="price">$ 100</div>
+                        <img class="image" src="../img/products/prod0/prod0.jpg" />
+                        <div class="price">$ <span>100</span></div>
                         <div class="icons">
                             <img src="../img/icon/heart.png" />
                             <img src="../img/icon/letter.png" />
@@ -100,11 +103,11 @@
                         <img class="new-icon" src="../img/icon/sign.png" />
                     </div>
                 </a>
-                <a href="iphone15-plus.html">
+                <a href="prod.html" onclick="openDetail(1)">
                     <div class="prod">
                         <div class="name">IPhone-15-pro-Max</div>
-                        <img class="image" src="../img/products/iPhone-15-pro-Max.jpg" />
-                        <div class="price">$ 100</div>
+                        <img class="image" src="../img/products/prod1/prod0.jpg" />
+                        <div class="price">$ <span>100</span></div>
                         <div class="icons">
                             <img src="../img/icon/heart.png" />
                             <img src="../img/icon/letter.png" />
@@ -113,11 +116,11 @@
                         <img class="new-icon" src="../img/icon/sign.png" />
                     </div>
                 </a>
-                <a href="iphone15-plus.html">
+                <a href="prod.html" onclick="openDetail(0)">
                     <div class="prod">
                         <div class="name">Iphone-15-plus</div>
-                        <img class="image" src="../img/products/iphone-15-plus.jpg" />
-                        <div class="price">$ 100</div>
+                        <img class="image" src="../img/products/prod0/prod0.jpg" />
+                        <div class="price">$ <span>100</span></div>
                         <div class="icons">
                             <img src="../img/icon/heart.png" />
                             <img src="../img/icon/letter.png" />
@@ -129,11 +132,11 @@
             </div>
             <h3 id="Samsung">Samsung</h3>
             <div class="product-containers">
-                <a href="iphone15-plus.html">
+                <a href="prod.html" onclick="openDetail(2)">
                     <div class="prod">
                         <div class="name">Galaxy-s23-ultra</div>
-                        <img class="image" src="../img/products/galaxy-s23-ultra.png" />
-                        <div class="price">$ 100</div>
+                        <img class="image" src="../img/products/prod2/prod0.jpg" />
+                        <div class="price">$ <span>100</span></div>
                         <div class="icons">
                             <img src="../img/icon/heart.png" />
                             <img src="../img/icon/letter.png" />
@@ -142,40 +145,40 @@
                         <img class="new-icon" src="../img/icon/sign.png" />
                     </div>
                 </a>
-                <a href="iphone15-plus.html">
+                <a href="prod.html" onclick="openDetail(3)">
                     <div class="prod">
                         <div class="name">Galaxy-s24-ultra</div>
-                        <img class="image" src="../img/products/galaxy-s24-ultra.jpg" />
-                        <div class="price">$ 100</div>
-                        <div class="icons">
-                            <img src="../img/icon/heart.png" />
-                            <img src="../img/icon/letter.png" />
-                            <img src="../img/con/shopping-cart.png" />
-                        </div>
-                        <img class="new-icon" src="../img/icon/sign.png" />
-                    </div>
-                </a>
-                <a href="iphone15-plus.html">
-                    <div class="prod">
-                        <div class="name">Galaxy-s23-ultra</div>
-                        <img class="image" src="../img/products/galaxy-s23-ultra.png" />
-                        <div class="price">$ 100</div>
+                        <img class="image" src="../img/products/prod3/prod0.jpg" />
+                        <div class="price">$ <span>100</span></div>
                         <div class="icons">
                             <img src="../img/icon/heart.png" />
                             <img src="../img/icon/letter.png" />
                             <img src="../img/icon/shopping-cart.png" />
                         </div>
                         <img class="new-icon" src="../img/icon/sign.png" />
+                    </div>
+                </a>
+                <a href="prod.html" onclick="openDetail(2)">
+                    <div class="prod">
+                        <div class="name">Galaxy-s23-ultra</div>
+                        <img class="image" src="../img/products/prod2/prod0.jpg" />
+                        <div class="price">$ <span>100</span></div>
+                        <div class="icons">
+                            <img src="../img/icon/heart.png" />
+                            <img src="../img/icon/letter.png" />
+                            <img src="../img/icon/shopping-cart.png" />
+                        </div>
+                        <img class="new-icon" src="../img/icon/sign.png" />galaxy/
                     </div>
                 </a>
             </div>
             <h3 id="Xiaomi">Xiaomi</h3>
             <div class="product-containers">
-                <a href="iphone15-plus.html">
+                <a href="prod.html" onclick="openDetail(4)">
                     <div class="prod">
                         <div class="name">Redmi-Note-12-Pro</div>
-                        <img class="image" src="../img/products/Redmi-Note-12-Pro.jpg" />
-                        <div class="price">$ 100</div>
+                        <img class="image" src="../img/products/prod4/prod0.jpg" />
+                        <div class="price">$ <span>100</span></div>
                         <div class="icons">
                             <img src="../img/icon/heart.png" />
                             <img src="../img/icon/letter.png" />
@@ -184,11 +187,11 @@
                         <img class="new-icon" src="../img/icon/sign.png" />
                     </div>
                 </a>
-                <a href="iphone15-plus.html">
+                <a href="prod.html" onclick="openDetail(5)">
                     <div class="prod">
                         <div class="name">Redmi-note-13</div>
-                        <img class="image" src="../img/products/redmi-note-13.png" />
-                        <div class="price">$ 100</div>
+                        <img class="image" src="../img/products/prod5/prod0.jpg" />
+                        <div class="price">$ <span>100</span></div>
                         <div class="icons">
                             <img src="../img/icon/heart.png" />
                             <img src="../img/icon/letter.png" />
@@ -197,11 +200,11 @@
                         <img class="new-icon" src="../img/icon/sign.png" />
                     </div>
                 </a>
-                <a href="iphone15-plus.html">
+                <a href="prod.html" onclick="openDetail(4)">
                     <div class="prod">
                         <div class="name">Redmi-Note-12-Pro</div>
-                        <img class="image" src="../img/products/Redmi-Note-12-Pro.jpg" />
-                        <div class="price">$ 100</div>
+                        <img class="image" src="../img/products/prod4/prod0.jpg" />
+                        <div class="price">$ <span>100</span></div>
                         <div class="icons">
                             <img src="../img/icon/heart.png" />
                             <img src="../img/icon/letter.png" />
@@ -220,12 +223,12 @@
     </footer>
 
     <div class="moveUp">
-        <a href="#top"><img src="../img/upload.png" alt="move top"></a>
+        <a href="#top"><img src="../img/icon/upload.png" alt="move top"></a>
     </div>
 
-    <script src="../js/banner.js" type="text/javascript">
-        
-    </script>
+    <script src="../js/banner.js"></script>
+    <script src="../js/prod.js"></script>
+    <script src="../js/user.js"></script>
 </body>
 
 </html>
